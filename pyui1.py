@@ -11,6 +11,7 @@ class PyUiTest(QDialog):
     @pyqtSlot()
     def on_pushButton_clicked(self):
         self.label.setText(self.lineEdit.text())
+        self.plainTextEdit.setPlainText("Hello" + "\n" + "World")
 
 app=QApplication(sys.argv)
 widget=PyUiTest()
